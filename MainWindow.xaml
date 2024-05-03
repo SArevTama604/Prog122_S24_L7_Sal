@@ -6,7 +6,65 @@
         xmlns:local="clr-namespace:Prog122_S24_L7_Sal"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Canvas>
+        <ListBox
+            x:Name="lbDisplay"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Height="259"
+            Canvas.Left="82"
+            Canvas.Top="111"
+            Width="318"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            SelectionChanged="lbDisplay_SelectionChanged" />
+        <Label
+            x:Name="lblCurrentSelectionIndex"
+            Content="Label"
+            Canvas.Left="82"
+            Canvas.Top="29"
+            Height="30"
+            Width="106"
+            FontSize="14"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <Label
+            x:Name="lblCurrentSelectedValue"
+            Content="Value"
+            Canvas.Left="135"
+            Canvas.Top="29"
+            Height="30"
+            Width="107"
+            FontSize="14"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <ComboBox
+            x:Name="cmbNames"
+            Canvas.Left="82"
+            Canvas.Top="64"
+            Width="246"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            SelectionChanged="cmbNames_SelectionChanged" />
+        <Label
+            x:Name="lbCmbSelectedIndex"
+            Content="Label"
+            Canvas.Left="205"
+            Canvas.Top="33" />
+        <TextBox
+            x:Name="txtAddToList"
+            Canvas.Left="471"
+            TextWrapping="Wrap"
+            Canvas.Top="142"
+            Width="120" />
+        <Button
+            x:Name="btnAddToList"
+            Content="Add To List"
+            Canvas.Left="459"
+            Canvas.Top="179"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Width="144"
+            Click="btnAddToList_Click" />
 
-    </Grid>
+    </Canvas>
 </Window>
